@@ -1,0 +1,18 @@
+@import '~@/css/variables.less';
+
+.ui-message {
+  color: @primary-danger-color;
+
+  &.success {
+    color: @primary-success-color;
+  }
+
+  // 让元素占据空间，避免应该元素频繁在渲染和不渲染切换过程中造成页面抖动
+  &.hidden {
+    visibility: hidden;
+
+    &.active {
+      visibility: visible;
+    }
+  }
+}
